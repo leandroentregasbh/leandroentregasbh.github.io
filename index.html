@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LM Express — Entregas de confiança em Belo Horizonte</title>
+<meta name="description" content="Entregas de documentos, chaves e itens de valor em Belo Horizonte, com 15 anos de confiança. Sem entregador aleatório de aplicativo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1F3D;
+    --navy-deep: #0A1529;
+    --orange: #E8622C;
+    --orange-dark: #C94F1F;
+    --paper: #F6F3EC;
+    --ink: #1C2333;
+    --ink-soft: #5A6178;
+    --line: #D9D4C6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  header {
+    background: var(--navy);
+    padding: 20px 0;
+  }
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--orange); }
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .header-cta:hover { background: var(--orange-dark); }
+
+  .hero {
+    background: var(--navy);
+    background-image: radial-gradient(circle at 82% 20%, rgba(232,98,44,0.18), transparent 55%);
+    padding: 84px 0 96px;
+    position: relative;
+  }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    color: var(--orange);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: 46px;
+    color: #fff;
+    max-width: 12ch;
+    margin-bottom: 22px;
+  }
+  .hero p {
+    color: #C7CDE0;
+    font-size: 17px;
+    max-width: 46ch;
+    margin-bottom: 32px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .hero-note {
+    color: #8F97B3;
+    font-size: 14px;
+  }
+
+  .hero-card {
+    background: var(--navy-deep);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 32px;
+  }
+  .hero-card-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-card-row:last-child { border-bottom: none; }
+  .hero-card-label { color: #8F97B3; font-size: 14px; }
+  .hero-card-value { color: #fff; font-weight: 600; font-size: 15px; text-align: right; }
+
+  .trust {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .trust .wrap {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    color: var(--ink-soft);
+    font-size: 14px;
+    text-align: center;
+  }
+  .trust strong { color: var(--navy); font-family: 'Fraunces', serif; font-size: 20px; display: block; }
+
+  section { padding: 88px 0; }
+  .section-head {
+    max-width: 60ch;
+    margin-bottom: 48px;
+  }
+  .section-head h2 { font-size: 32px; margin-bottom: 14px; }
+  .section-head p { color: var(--ink-soft); font-size: 16px; }
+
+  .how {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .how-item {
+    border-top: 2px solid var(--navy);
+    padding-top: 20px;
+  }
+  .how-item h3 { font-size: 19px; margin-bottom: 10px; }
+  .how-item p { color:
