@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LM Express — Motoboy corporativo em Belo Horizonte</title>
+<meta name="description" content="Serviço de motoboy corporativo em BH com contrato mensal fixo. Sem comissão por corrida. Atendimento para escritórios de advocacia, contabilidade e imobiliárias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1F3D;
+    --navy-deep: #0A1529;
+    --orange: #E8622C;
+    --orange-dark: #C94F1F;
+    --paper: #F6F3EC;
+    --ink: #1C2333;
+    --ink-soft: #5A6178;
+    --line: #D9D4C6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    padding: 20px 0;
+  }
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--orange); }
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .header-cta:hover { background: var(--orange-dark); }
+
+  /* Hero */
+  .hero {
+    background: var(--navy);
+    background-image: radial-gradient(circle at 82% 20%, rgba(232,98,44,0.18), transparent 55%);
+    padding: 84px 0 96px;
+    position: relative;
+  }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    color: var(--orange);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: 46px;
+    color: #fff;
+    max-width: 12ch;
+    margin-bottom: 22px;
+  }
+  .hero p {
+    color: #C7CDE0;
+    font-size: 17px;
+    max-width: 46ch;
+    margin-bottom: 32px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .hero-note {
+    color: #8F97B3;
+    font-size: 14px;
+  }
+
+  .hero-card {
+    background: var(--navy-deep);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 32px;
+  }
+  .hero-card-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-card-row:last-child { border-bottom: none; }
+  .hero-card-label { color: #8F97B3; font-size: 14px; }
+  .hero-card-value { color: #fff; font-weight: 600; font-size: 15px; text-align: right; }
+
+  /* Trust bar */
+  .trust {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .trust .wrap {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    color: var(--ink-soft);
+    font-size: 14px;
+    text-align: center;
+  }
+  .trust strong { color: var(--navy); font-family: 'Fraunces', serif; font-size: 20px; display: block; }
+
+  /* Sections */
+  section { padding: 88px 0; }
+  .section-head {
+    max-width: 60ch;
+    margin-bottom: 48px;
+  }
+  .section-head h2 { font-size: 32px; margin-bottom: 14px; }
+  .section-head p { color: var(--ink-soft); font-size: 16px; }
+
+  /* Como funciona */
+  .how {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .how-item {
+    border-top: 2px solid var(--navy);
+    padding-top: 20px;
+  }
+  .how-item h3 { font-size: 19px; margin-bottom: 10px; }
+  .how-item p { color: var(--ink-soft); font-size: 15px; }
+
+  /* Diferencial */
+  .diff-section { background: var(--navy); }
+  .diff-section .section-head h2,
+  .diff-section .section-head p { color: #fff; }
+  .diff-section .section-head p { color: #C7CDE0; }
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .diff-card {
+    background: var(--navy-deep);
+    padding: 28px;
+  }
+  .diff-card h3 {
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+  }
+  .diff-card p {
+    color: #C7CDE0;
+    font-size: 14.5px;
+  }
+
+  /* Público */
+  .audience {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .audience-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px;
+  }
+  .audience-card h3 { font-size: 18px; margin-bottom: 10px; }
+  .audience-card p { color: var(--ink-soft); font-size: 14.5px; }
+
+  /* CTA final */
+  .cta-final {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 56px;
+    text-align: center;
+    margin: 0 32px;
+  }
+  .cta-final h2 { font-size: 30px; margin-bottom: 14px; }
+  .cta-final p { color: var(--ink-soft); font-size: 16px; margin-bottom: 30px; max-width: 46ch; margin-left: auto; margin-right: auto; }
+
+  footer {
+    background: var(--navy-deep);
+    padding: 32px 0;
+    text-align: center;
+    color: #8F97B3;
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 34px; max-width: none; }
+    .how, .diff-grid, .audience { grid-template-columns: 1fr; }
+    .cta-final { margin: 0 16px; padding: 40px 24px; }
+    .trust .wrap { gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">LM <span>Express</span></div>
+    <a class="header-cta" href="https://wa.me/5531998523360?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20motoboy%20fixo%20mensal%20da%20LM%20Express" target="_blank" rel="noopener">
+      Falar no WhatsApp
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="hero-eyebrow">Motoboy corporativo em Belo Horizonte</div>
+      <h1>Entregas da sua empresa, sem cobrança por corrida</h1>
+      <p>Contrato mensal fixo para escritórios de advocacia, contabilidade e imobiliárias. Um motoboy dedicado à sua rotina — sem surpresa na fatura, sem depender de aplicativo.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/5531998523360?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20motoboy%20fixo%20mensal%20da%20LM%20Express" target="_blank" rel="noopener">
+          Solicitar proposta no WhatsApp
+        </a>
+        <span class="hero-note">Resposta no mesmo dia útil</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-row">
+        <span class="hero-card-label">Experiência</span>
+        <span class="hero-card-value">15+ anos em BH</span>
+      </div>
+      <div class="hero-card-row">
+        <span class="hero-card-label">Modelo de cobrança</span>
+        <span class="hero-card-value">Mensalidade fixa</span>
+      </div>
+      <div class="hero-card-row">
+        <span class="hero-card-label">Área de atendimento</span>
+        <span class="hero-card-value">Savassi e Jardim Canadá</span>
+      </div>
+      <div class="hero-card-row">
+        <span class="hero-card-label">Avaliação</span>
+        <span class="hero-card-value">5.0 · 94+ avaliações</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div><strong>15+</strong>anos de estrada em BH</div>
+    <div><strong>5.0</strong>de avaliação no Google</div>
+    <div><strong>0%</strong>de comissão por entrega</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Como funciona</h2>
+      <p>Sem cadastro em plataforma, sem escala por demanda. Você combina o serviço uma vez e ele roda sozinho todo mês.</p>
+    </div>
+    <div class="how">
+      <div class="how-item">
+        <h3>1. Conversa inicial</h3>
+        <p>Você conta o volume de entregas e a rotina do escritório. Em minutos já dá pra montar uma proposta.</p>
+      </div>
+      <div class="how-item">
+        <h3>2. Contrato mensal</h3>
+        <p>Fechamos um valor fixo mensal, sem cobrança por corrida e sem taxa variável surpresa no fim do mês.</p>
+      </div>
+      <div class="how-item">
+        <h3>3. Motoboy dedicado</h3>
+        <p>Suas entregas passam a ter prioridade com um profissional que conhece sua operação e seus clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diff-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Por que não usar um app de entrega</h2>
+      <p>Apps cobram por corrida e priorizam quem paga mais no momento. Para uma empresa com entregas recorrentes, isso vira custo imprevisível.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <h3>Custo previsível</h3>
+        <p>Uma mensalidade fixa, sem taxa por km, sem tarifa dinâmica em horário de pico.</p>
+      </div>
+      <div class="diff-card">
+        <h3>Prioridade garantida</h3>
+        <p>Sua entrega não compete com outros pedidos de outros clientes na mesma hora.</p>
+      </div>
+      <div class="diff-card">
+        <h3>Relação direta</h3>
+        <p>Você fala com a mesma pessoa todos os dias — não com um app diferente a cada corrida.</p>
+      </div>
+      <div class="diff-card">
+        <h3>Conhecimento da rotina</h3>
+        <p>Documentos sensíveis, endereços recorrentes e horários críticos: o motoboy já sabe o caminho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Para quem é</h2>
+      <p>Atendemos negócios que dependem de entregas rápidas e confiáveis como parte da operação, não como exceção.</p>
+    </div>
+    <div class="audience">
+      <div class="audience-card">
+        <h3>Escritórios de advocacia</h3>
+        <p>Protocolos, petições e documentos que precisam chegar no prazo, com discrição.</p>
+      </div>
+      <div class="audience-card">
+        <h3>Escritórios de contabilidade</h3>
+        <p>Guias, notas e documentos fiscais entregues sem atraso no fechamento do mês.</p>
+      </div>
+      <div class="audience-card">
+        <h3>Imobiliárias</h3>
+        <p>Chaves, contratos e vistorias — entregas que não podem esperar a fila de um aplicativo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-final">
+    <h2>Vamos falar sobre a sua rotina de entregas?</h2>
+    <p>Me conta o volume e a região que você atende, e eu te devolvo uma proposta de mensalidade ainda hoje.</p>
+    <a class="btn-primary" href="https://wa.me/5531998523360?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20motoboy%20fixo%20mensal%20da%20LM%20Express" target="_blank" rel="noopener">
+      Chamar no WhatsApp agora
+    </a>
+  </div>
+</section>
+
+<footer>
+  LM Express — Motoboy corporativo em Belo Horizonte · (31) 99852-3360
+</footer>
+
+</body>
+</html>
